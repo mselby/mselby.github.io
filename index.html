@@ -3,77 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M. Selby | Portfolio</title>
+    <title>Mark Selby | Interaction Designer & Researcher</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #212529;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            color: #111111;
+            background-color: #ffffff;
             margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            padding: 80px 10%; /* Matches the generous white space margins from the slide */
+            line-height: 1.4;
         }
-        .portfolio-card {
-            background: #ffffff;
-            padding: 50px 40px;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
-            text-align: center;
-            max-width: 420px;
-            width: 90%;
-            border: 1px solid rgba(0, 0, 0, 0.03);
+
+        .container {
+            max-width: 800px;
         }
-        .tag {
-            display: inline-block;
-            background: #e9ecef;
-            color: #495057;
-            padding: 6px 14px;
-            border-radius: 100px;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 32px;
+
+        h1.name {
+            font-size: 20px;
             font-weight: 700;
-            margin: 0 0 12px 0;
+            margin-bottom: 80px;
+        }
+
+        h2.headline {
+            font-size: 36px;
+            font-weight: 400;
             letter-spacing: -0.5px;
+            margin: 0 0 16px 0;
         }
-        p {
-            font-size: 16px;
-            color: #6c757d;
-            line-height: 1.6;
-            margin: 0 0 35px 0;
+
+        h3.sub-headline {
+            font-size: 32px;
+            font-weight: 400;
+            color: #222222;
+            margin: 0 0 60px 0;
         }
-        .btn-primary {
-            display: block;
-            background: #111111;
-            color: #ffffff;
+
+        .links-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 60px 0;
+            font-size: 18px;
+        }
+
+        .links-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Recreates the bright green background block highlight from Slide2.jpeg */
+        .links-list a {
+            color: #000000;
             text-decoration: none;
-            padding: 16px 30px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #00FF00; /* Crisp neon green highlight */
+            padding: 2px 4px;
+            font-weight: 500;
         }
-        .btn-primary:hover {
-            background: #333333;
-            transform: translateY(-1px);
+
+        .links-list a:hover {
+            opacity: 0.85;
+        }
+
+        .contact-section {
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .contact-section h4 {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0 0 14px 0;
+            color: #111111;
+        }
+
+        .contact-info {
+            line-height: 1.6;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            body {
+                padding: 40px 5%;
+            }
+            h2.headline { font-size: 28px; }
+            h3.sub-headline { font-size: 24px; margin-bottom: 40px; }
+            h1.name { margin-bottom: 50px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="portfolio-card">
-        <span class="tag">Selected Works</span>
-        <h1>M. Selby</h1>
-        <p>Design &amp; Project Portfolio presentation. Click below to view the full case studies.</p>
-        <a href="https://docs.google.com/viewer?url=https://mselby.github.io/portfolio.pdf&embedded=true" class="btn-primary" target="_blank">Open Portfolio PDF</a>
+    <div class="container">
+        <!-- Logo / Name Header -->
+        <h1 class="name">Mark Selby</h1>
+
+        <!-- Main Copy Block -->
+        <h2 class="headline">Interaction Designer &amp; Researcher</h2>
+        <h3 class="sub-headline">Bridging data, physical things, spaces and people.</h3>
+
+        <!-- Highlighted Navigation Links -->
+        <ul class="links-list">
+            <!-- This routes your PDF safely through the Google web viewer to fix Firefox downloads -->
+            <li>- <a href="https://docs.google.com/viewer?url=https://mselby.github.io/portfolio.pdf&embedded=true" target="_blank">Portfolio</a></li>
+            
+            <!-- Replace the '#' symbols below with your live links when you are ready -->
+            <li>- <a href="#" target="_blank">LinkedIn</a></li>
+            <li>- <a href="#" target="_blank">Publications</a></li>
+        </ul>
+
+        <!-- Footer Contact Block -->
+        <div class="contact-section">
+            <h4>Get in touch</h4>
+            <div class="contact-info">
+                markjselby@gmail.com<br>
+                +31(0)659583047<br>
+                Rotterdam, Netherlands
+            </div>
+        </div>
     </div>
 
 </body>
