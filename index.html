@@ -3,45 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio | M. Selby</title>
     <style>
-        /* Forces the PDF to fill the entire browser screen without any ugly gaps */
-        html, body {
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            background-color: #333; /* Clean dark background while the PDF loads */
-        }
-        iframe {
-            border: none;
-            width: 100%;
-            height: 100%;
-        }
-        .fallback {
-            color: white;
-            font-family: system-ui, sans-serif;
+            background-color: #f4f4f7;
             text-align: center;
-            padding: 40px;
         }
-        .fallback a {
-            color: #0076ff;
+        .container {
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 400px;
+            width: 80%;
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            color: #1d1d1f;
+            font-size: 28px;
+        }
+        p {
+            color: #86868b;
+            margin: 0 0 30px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #0071e3;
+            color: white;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+        .btn:hover {
+            background: #0077ed;
         }
     </style>
 </head>
 <body>
 
-    <!-- Embeds your PDF directly so it displays instead of downloading -->
-    <iframe src="portfolio.pdf">
-        <!-- This backup message only shows up if a browser literally cannot view PDFs -->
-        <div class="fallback">
-            <p>Your browser doesn't support embedded PDFs.</p>
-            <p><a href="portfolio.pdf">Click here to download and view the portfolio.</a></p>
-        </div>
-    </iframe>
+    <div class="container">
+        <h1>M. Selby</h1>
+        <p>Design & Project Portfolio</p>
+        <!-- This opens the PDF in a clean new browser tab -->
+        <a href="portfolio.pdf" class="btn" target="_blank">View PDF Portfolio</a>
+    </div>
 
 </body>
 </html>
