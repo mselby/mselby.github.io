@@ -3,25 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
     <style>
-        /* This makes the PDF fill the entire browser window seamlessly */
-        body, html {
+        /* Forces the PDF to fill the entire browser screen without any ugly gaps */
+        html, body {
             margin: 0;
             padding: 0;
             height: 100%;
+            width: 100%;
             overflow: hidden;
+            background-color: #333; /* Clean dark background while the PDF loads */
         }
         iframe {
             border: none;
             width: 100%;
             height: 100%;
         }
+        .fallback {
+            color: white;
+            font-family: system-ui, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        .fallback a {
+            color: #0076ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
-    <iframe src="portfolio.pdf"></table>
+    <!-- Embeds your PDF directly so it displays instead of downloading -->
+    <iframe src="portfolio.pdf">
+        <!-- This backup message only shows up if a browser literally cannot view PDFs -->
+        <div class="fallback">
+            <p>Your browser doesn't support embedded PDFs.</p>
+            <p><a href="portfolio.pdf">Click here to download and view the portfolio.</a></p>
+        </div>
+    </iframe>
 
 </body>
 </html>
